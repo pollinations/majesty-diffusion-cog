@@ -49,7 +49,7 @@ from mmc.mock.openai import MockOpenaiClip
 
 
 model_path = "/content/models/"
-outputs_path = "/ipfs/output"  # TODO check
+outputs_path = "/outputs"  # TODO check
 
 
 torch.backends.cudnn.benchmark = True
