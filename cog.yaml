@@ -32,6 +32,9 @@ build:
     - git clone https://github.com/multimodalart/latent-diffusion --branch 1.6
     - git clone https://github.com/CompVis/taming-transformers
     - git clone https://github.com/TencentARC/GFPGAN
+    - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+    - apt-get install git-lfs
+    - git lfs install
     - git lfs clone https://huggingface.co/datasets/multimodalart/latent-majesty-diffusion-settings
     - git lfs clone https://github.com/LAION-AI/aesthetic-predictor
     - pip install -e ./taming-transformers
@@ -49,20 +52,20 @@ build:
     - cd Multi-Modal-Comparators; poetry build; cd ..
     - cd Multi-Modal-Comparators; pip install dist/mmc*.whl; cd ..
     - python Multi-Modal-Comparators/src/mmc/napm_installs/__init__.py
-    - wget -O $model_path/latent_diffusion_txt2img_f8_large.ckpt https://ommer-lab.com/files/latent-diffusion/nitro/txt2img-f8-large/model.ckpt --no-check-certificate
-    - wget -O $model_path/txt2img-f8-large-jack000-finetuned-fp16.ckpt https://huggingface.co/multimodalart/compvis-latent-diffusion-text2img-large/resolve/main/txt2img-f8-large-jack000-finetuned-fp16.ckpt --no-check-certificate
-    - wget -O $model_path/ongo.pt https://huggingface.co/laion/ongo/resolve/main/ongo.pt
-    - wget -O $model_path/erlich.pt https://huggingface.co/laion/erlich/resolve/main/model/ema_0.9999_120000.pt
-    - wget -O $model_path/ava_vit_l_14_336_linear.pth https://models.nmb.ai/majesty/ava_vit_l_14_336_linear.pth
-    - wget -O $model_path/sa_0_4_vit_l_14_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_l_14_linear.pth
-    - wget -O $model_path/ava_vit_l_14_linear.pth https://models.nmb.ai/majesty/ava_vit_l_14_linear.pth
-    - wget -O $model_path/ava_vit_b_16_linear.pth http://batbot.tv/ai/models/v-diffusion/ava_vit_b_16_linear.pth
-    - wget -O $model_path/sa_0_4_vit_b_16_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_b_16_linear.pth
-    - wget -O $model_path/sa_0_4_vit_b_32_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_b_32_linear.pth
-    - wget -O $model_path/openimages_512x_png_embed224.npz https://github.com/nshepperd/jax-guided-diffusion/raw/8437b4d390fcc6b57b89cedcbaf1629993c09d03/data/openimages_512x_png_embed224.npz
-    - wget -O $model_path/imagenet_512x_jpg_embed224.npz https://github.com/nshepperd/jax-guided-diffusion/raw/8437b4d390fcc6b57b89cedcbaf1629993c09d03/data/imagenet_512x_jpg_embed224.npz
-    - wget -O $model_path/GFPGANv1.3.pth https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
-    - cp $model_path/GFPGANv1.3.pth GFPGAN/experiments/pretrained_models/GFPGANv1.3.pth
+    - wget -O /content/models/latent_diffusion_txt2img_f8_large.ckpt https://ommer-lab.com/files/latent-diffusion/nitro/txt2img-f8-large/model.ckpt --no-check-certificate
+    - wget -O /content/models/txt2img-f8-large-jack000-finetuned-fp16.ckpt https://huggingface.co/multimodalart/compvis-latent-diffusion-text2img-large/resolve/main/txt2img-f8-large-jack000-finetuned-fp16.ckpt --no-check-certificate
+    - wget -O /content/models/ongo.pt https://huggingface.co/laion/ongo/resolve/main/ongo.pt
+    - wget -O /content/models/erlich.pt https://huggingface.co/laion/erlich/resolve/main/model/ema_0.9999_120000.pt
+    - wget -O /content/models/ava_vit_l_14_336_linear.pth https://models.nmb.ai/majesty/ava_vit_l_14_336_linear.pth
+    - wget -O /content/models/sa_0_4_vit_l_14_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_l_14_linear.pth
+    - wget -O /content/models/ava_vit_l_14_linear.pth https://models.nmb.ai/majesty/ava_vit_l_14_linear.pth
+    - wget -O /content/models/ava_vit_b_16_linear.pth http://batbot.tv/ai/models/v-diffusion/ava_vit_b_16_linear.pth
+    - wget -O /content/models/sa_0_4_vit_b_16_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_b_16_linear.pth
+    - wget -O /content/models/sa_0_4_vit_b_32_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_b_32_linear.pth
+    - wget -O /content/models/openimages_512x_png_embed224.npz https://github.com/nshepperd/jax-guided-diffusion/raw/8437b4d390fcc6b57b89cedcbaf1629993c09d03/data/openimages_512x_png_embed224.npz
+    - wget -O /content/models/imagenet_512x_jpg_embed224.npz https://github.com/nshepperd/jax-guided-diffusion/raw/8437b4d390fcc6b57b89cedcbaf1629993c09d03/data/imagenet_512x_jpg_embed224.npz
+    - wget -O /content/models/GFPGANv1.3.pth https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
+    - cp /content/models/GFPGANv1.3.pth GFPGAN/experiments/pretrained_models/GFPGANv1.3.pth
 
         
         # optional final step:
