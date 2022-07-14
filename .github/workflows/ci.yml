@@ -32,13 +32,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install cog
-        run: |
-          curl -o /usr/local/bin/cog -L https://github.com/replicate/cog/releases/latest/download/cog_`uname -s`_`uname -m`
-          chmod +x /usr/local/bin/cog
+      # - name: Install cog
+      #   run: |
+      #     curl -o /usr/local/bin/cog -L https://github.com/replicate/cog/releases/latest/download/cog_`uname -s`_`uname -m`
+      #     chmod +x /usr/local/bin/cog
 
-      - name: Build docker image
-        run: cog build -t image:test
+      # - name: Build docker image
+      #   run: cog build -t image:test
 
       # - name: Smoke test docker image
       #   run: |
