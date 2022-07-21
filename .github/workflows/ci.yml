@@ -80,7 +80,7 @@ jobs:
           git config --global user.email "ci@pollinations.ai"
           git config --global user.name "pollinations-ci"
           git clone git@github.com:pollinations/model-index.git
-          cd model-index && python add_image.py ${{ github.repository }} $ECR_REGISTRY/$ECR_REPOSITORY && cd ..
           mkdir -p  model-index/${{ github.repository }}
           cp openapi.json model-index/${{ github.repository }}/openapi.json
+          cd model-index && python add_image.py ${{ github.repository }} $ECR_REGISTRY/$ECR_REPOSITORY && cd ..
           cd model-index && git add . && (git commit -m "Updated ${{ github.repository }}: ${{ github.event.head_commit.message }}" && git push) || echo "model index not updated"
