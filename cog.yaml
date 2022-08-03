@@ -59,7 +59,7 @@ build:
     - wget -O /content/models/ava_vit_l_14_336_linear.pth https://models.nmb.ai/majesty/ava_vit_l_14_336_linear.pth
     - wget -O /content/models/sa_0_4_vit_l_14_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_l_14_linear.pth
     - wget -O /content/models/ava_vit_l_14_linear.pth https://models.nmb.ai/majesty/ava_vit_l_14_linear.pth
-    - wget -O /content/models/ava_vit_b_16_linear.pth http://batbot.tv/ai/models/v-diffusion/ava_vit_b_16_linear.pth
+    - wget -O /content/models/ava_vit_b_16_linear.pth https://the-eye.eu/public/AI/models/v-diffusion/ava_vit_b_16_linear.pth
     - wget -O /content/models/sa_0_4_vit_b_16_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_b_16_linear.pth
     - wget -O /content/models/sa_0_4_vit_b_32_linear.pth https://models.nmb.ai/majesty/sa_0_4_vit_b_32_linear.pth
     - wget -O /content/models/openimages_512x_png_embed224.npz https://github.com/nshepperd/jax-guided-diffusion/raw/8437b4d390fcc6b57b89cedcbaf1629993c09d03/data/openimages_512x_png_embed224.npz
