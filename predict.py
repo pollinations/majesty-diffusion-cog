@@ -636,7 +636,7 @@ class Predictor(cog.BasePredictor):
         latent_diffusion_model: str = cog.Input(
             description='Original is the previous LAION model. Finetuned should be better but cannot do text. One of:  ["original", "finetuned", "ongo (fine tuned in paintings)", "erlich (fine tuned in logos)"]',
             default="finetuned",
-            options=["original", "finetuned", "ongo (fine tuned in paintings)", "erlich (fine tuned in logos)"],
+            choices=["original", "finetuned", "ongo (fine tuned in paintings)", "erlich (fine tuned in logos)"],
         ),  
         latent_diffusion_guidance_scale: int = cog.Input(
             description="Balance between creativity and coherent composition. Try values between 0-15. Lower values help with text interpretation and creativity, higher help with composition. ",
