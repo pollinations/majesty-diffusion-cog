@@ -1,0 +1,15 @@
+{
+    "featured": true,
+    "url": "pollinations/majesty-diffusion-cog",
+    "key": "614871946825.dkr.ecr.us-east-1.amazonaws.com/pollinations/majesty-diffusion-cog",
+    "name": "Majesty Diffusion",
+    "id2pop": "0 Majesty Diffusion",
+    "path": "majestydiffusion",
+    "category": "0 Featured",
+    "credits": "by [dango233](https://github.com/Dango233/) and [apolinario (@multimodalart)](https://twitter.com/multimodalart).",
+    "description": "![castle](https://user-images.githubusercontent.com/788417/169712054-fe3bf4bd-4473-4070-ba69-0f74f5c3e475.png)\n\n\n\nMajesty Diffusion is a mix of LAION and Disco Diffusion. Creates images that are more coherent and focused on individual objects rather than the complexity images with lots of small details in every part.\n\n\n\n---\n\n\n\nAccess our [Majestic Guide](https://multimodal.art/majesty-diffusion) (_under construction_), our [GitHub](https://github.com/multimodalart/majesty-diffusion), join our community on [Discord](https://discord.gg/yNBtQBEDfZ) or reach out via [@multimodalart on Twitter](https://twitter.com/multimodalart))\n\n\n\nby [dango233](https://github.com/Dango233/) and [apolinario (@multimodalart)](https://twitter.com/multimodalart). \n\nThe LAION-400M-trained model and the modified inference code are from [CompVis Latent Diffusion](https://github.com/CompVis/latent-diffusion). The guided-diffusion method is modified by Dango233 based on [Katherine Crowson](https://twitter.com/RiversHaveWings)'s guided diffusion notebook. multimodalart savable settings, MMC and assembled the Colab. Check the complete list on our GitHub. Some functions and methods are from various code masters (nsheppard, DanielRussRuss and others)\n",
+    "img": "https://user-images.githubusercontent.com/788417/169712054-fe3bf4bd-4473-4070-ba69-0f74f5c3e475.png",
+    "pollinator_group": [
+        "T4"
+    ]
+}
