@@ -632,7 +632,7 @@ class Predictor(cog.BasePredictor):
 
     def predict(
         self,
-        text_prompt: str = cog.Input(description="Your text prompt.", default=""),
+        Prompt: str = cog.Input(description="Your text prompt.", default=""),
         latent_diffusion_model: str = cog.Input(
             description='Original is the previous LAION model. Finetuned should be better but cannot do text. One of:  ["original", "finetuned", "ongo (fine tuned in paintings)", "erlich (fine tuned in logos)"]',
             default="finetuned",
@@ -642,6 +642,7 @@ class Predictor(cog.BasePredictor):
             default=12,
         ),
     ) -> None:
+        text_prompt = Prompt
         clip_prompts = [text_prompt]
 
         # Prompt for Latent Diffusion
